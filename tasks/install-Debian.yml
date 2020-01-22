@@ -1,0 +1,16 @@
+---
+- name: Install PHP-FPM
+  apt:
+    name: php-fpm
+    state: present
+  when: php_http_mode == "fpm"
+
+- name: Install PHP Modules
+  apt:
+    name: "{{ php_install_modules }}"
+
+- name: Ensure that PHP-FPM is started and enabled on boot
+  service:
+    name: php7.3-fpm
+    state: started
+    enabled: "{{ php_fpm_enable_on_boot }}"

@@ -1,0 +1,7 @@
+---
+- include_tasks: vars.yml
+
+- include_tasks: install-Debian.yml
+  when: ansible_os_family | lower in ['debian', 'ubuntu']
+
+# TODO: install on CentOS / RHEL
