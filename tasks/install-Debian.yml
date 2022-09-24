@@ -11,6 +11,6 @@
 
 - name: Ensure that PHP-FPM is started and enabled on boot
   service:
-    name: php7.3-fpm
+    name: "{{ php_fpm_package_name }}"
     state: started
     enabled: "{{ php_fpm_enable_on_boot }}"
