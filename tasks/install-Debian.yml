@@ -7,7 +7,7 @@
 
 - name: Install PHP Modules
   apt:
-    name: "{{ php_install_modules }}"
+    name: "{{ php_modules_install }}"
 
 - name: Ensure that PHP-FPM is started and enabled on boot
   service:

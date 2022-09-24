@@ -1,5 +1,0 @@
----
-- name: Add PHP common modules to the list of modules to be installed
-  set_fact:
-    php_install_modules: "{{ php_install_modules + php_common_modules }}"
-  when: php_install_common_modules

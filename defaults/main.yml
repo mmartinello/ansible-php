@@ -2,13 +2,8 @@
 # Installation mode (only 'fpm' is supported at the moment)
 php_http_mode: fpm
 
-# PHP common modules
-php_install_common_modules: true
-php_common_modules:
-  - php-mysql
-
-# PHP additional modules to be installed
-php_install_modules: []
+# PHP modules to be installed
+php_modules_install: []
 
 # PHP FPM configuration
 php_fpm_enable_on_boot: true
